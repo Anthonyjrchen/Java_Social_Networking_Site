@@ -9,6 +9,7 @@ public class User {
     private String gender;
     private String displayName;
     private Map<String, User> friends;
+    private List<Group> listOfGroups = new ArrayList<>();
 
 
     public User(String pass, String name, String gender, Date birthdate) {
@@ -41,7 +42,14 @@ public class User {
         //stub
     }
 
+    public void receiveInvite(Group g) {
+        //stub
+    }
 
+    public void createGroup() {
+        Group toBeAdded = new Group(this);
+        listOfGroups.add(toBeAdded);
+    }
 
 
 
